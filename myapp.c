@@ -15,6 +15,13 @@ Node* createNode(int data) {
     newNode->right = NULL;
     return newNode;
 }
+void preOrder(Node* root) {
+    if (root == NULL)
+        return;
+    printf("%d ", root->data);
+    preOrder(root->left);
+    preOrder(root->right);
+}
 int main() {
     printf("Arborele este în construcție.\n");
     return 0;
