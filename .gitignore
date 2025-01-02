@@ -1,0 +1,23 @@
+# Ignoră directoare și fișiere specifice sistemului
+.aws/
+.azure/
+.cache/
+.docker/
+.dotnet/
+.landscape/
+.local/
+.redhat/
+.ssh/
+.vscode-remote-containers/
+.vscode-server/
+.vscode/
+
+# Ignoră fișiere de configurare personale
+.bash_history
+.bash_logout
+.bashrc
+.gitconfig
+.motd_shown
+.profile
+.sudo_as_admin_successful
+andreibocea.lnk
