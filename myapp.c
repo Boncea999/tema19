@@ -29,6 +29,13 @@ void inOrder(Node* root) {
     printf("%d ", root->data);
     inOrder(root->right);
 }
+void postOrder(Node* root) {
+    if (root == NULL)
+        return;
+    postOrder(root->left);
+    postOrder(root->right);
+    printf("%d ", root->data);
+}
 int main() {
     printf("Arborele este în construcție.\n");
     return 0;
