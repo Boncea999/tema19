@@ -36,7 +36,36 @@ void postOrder(Node* root) {
     postOrder(root->right);
     printf("%d ", root->data);
 }
+void levelOrder(Node* root) {
+    if (root == NULL)
+        return;
+    Node* coada[100];
+    int start = 0, end = 0;
+    coada[end++] = root;
+    while (start < end) {
+        Node* current = coada[start++];
+        printf("%d ", current->data);
+        if (current->left)
+            coada[end++] = current->left;
+        if (current->right)
+            coada[end++] = current->right;
+    }
+}
 int main() {
     printf("Arborele este în construcție.\n");
-    return 0;
+    Node* radacina = createNode(1);
+    radacina->left = createNode(2);
+    radacina->right = createNode(3);
+    radacina->left->left= createNode(4);
+    radacina->left->right = createNode(5);
+    radacina->right->left = createNode(6);
+    radacina->right->right = createNode(7);
+   preOrder(radacina);
+     printf("\n");
+   inOrder(radacina);
+     printf("\n");
+   postOrder(radacina);
+     printf("\n");
+   levelOrder(radacina);
+     printf("\n");
 }
